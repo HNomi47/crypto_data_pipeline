@@ -1,41 +1,21 @@
 {
-
   "version": 2,
-
   "builds": [
-
     {
-
       "src": "api/main.py",
-
       "use": "@vercel/python"
-
     }
-
   ],
-
   "routes": [
-
     {
-
-      "src": "/api/(.*)",
-
+      "src": "/(.*)",
       "dest": "api/main.py"
-
     }
-
   ],
-
   "crons": [
-
     {
-
       "path": "/api/collect-daily-snapshot",
-
       "schedule": "59 23 * * *"
-
     }
-
   ]
-
 }

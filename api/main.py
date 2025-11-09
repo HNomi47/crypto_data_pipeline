@@ -39,12 +39,12 @@ def get_db():
         db.close()
 
 # --- 4. THE "HELLO WORLD" ENDPOINT ---
-@app.get("/hello")
+@app.get("/api/hello")
 def get_root():
     return {"message": "Welcome to the Crypto API! It's working!"}
 
 # --- 5. THE *REAL* API ENDPOINT ---
-@app.get("/all-coins")
+@app.get("/api/all-coins")
 def get_all_coins_data(db: Session = Depends(get_db)):
     """
     This is the main endpoint our Streamlit app will call.
@@ -97,7 +97,7 @@ def get_all_coins_data(db: Session = Depends(get_db)):
         return {"error": "Could not fetch data from database.", "details": str(e)}
 
 # --- 6. CRON JOB ENDPOINT (This is NEW!) ---
-@app.get("/collect-daily-snapshot")
+@app.get("/api/collect-daily-snapshot")
 def collect_daily_snapshot():
     """
     This endpoint is called by the Vercel cron job once per day.

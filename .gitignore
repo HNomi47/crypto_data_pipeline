@@ -1,0 +1,5 @@
+# Ignore Python's cache
+__pycache__/
+
+# Ignore any future .env files (for local secrets)
+.env

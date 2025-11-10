@@ -311,8 +311,8 @@ def fetch_live_prices():
             db.execute(sql, {
                 "price": price_info.get("PRICE"),
                 "mktcap": price_info.get("MKTCAP"),
-                "vol": price_info.get("TOTALVOLUME24H"),
-                "pctchange": price_info.get("CHANGEPCT24HOURTO"),
+                "vol": price_info.get("TOTALVOLUME24HTO"),
+                "pctchange": price_info.get("CHANGEPCT24HOUR"),
                 "symbol": symbol
             })
         

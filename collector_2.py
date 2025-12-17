@@ -377,7 +377,7 @@ if __name__ == "__main__":
     
     # We comment these out because we don't need them for this test
     # fetch_master_coin_list() 
-    fetch_live_prices()
+    # fetch_live_prices()
     
     # We ONLY run our new "snapshot" function
     store_daily_data()
